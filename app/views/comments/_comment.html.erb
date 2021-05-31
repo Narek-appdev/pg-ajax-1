@@ -9,7 +9,7 @@
 
         <div>
           <% if current_user == comment.author %>
-            <%= link_to edit_comment_path(comment), class: "btn btn-link btn-sm text-muted" do %>
+            <%= link_to edit_comment_path(comment), class: "btn btn-link btn-sm text-muted", remote: true do %>
               <i class="fas fa-edit fa-fw"></i>
             <% end %>
 
@@ -19,7 +19,7 @@
           <% end %>
         </div>
       </div>
-      <p "<%= dom_id(@comment.photo) %>_new_comment_form"> <%= comment.body %></p>
+      <p "<%= dom_id(comment.photo) %>_new_comment_form" > <%= comment.body %></p>
     </div>
   </div> 
 </li>

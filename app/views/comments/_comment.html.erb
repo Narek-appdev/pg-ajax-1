@@ -19,7 +19,7 @@
           <% end %>
         </div>
       </div>
-      <p><%= comment.body %></p>
+      <p "<%= dom_id(@comment.photo) %>_new_comment_form"> <%= comment.body %></p>
     </div>
   </div> 
 </li>
